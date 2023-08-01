@@ -1,6 +1,6 @@
 touch application-secret.properties
-azure.accessKey=
-azure.secretKey=
+azure.serviceURI=
+azure.primarySecretKey=
 
 
 ```

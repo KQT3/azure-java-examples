@@ -30,7 +30,7 @@ public class CosmosDB {
         CosmosDatabase cosmosDatabase = cosmosClient.getDatabase(databaseId);
         CosmosContainer cosmosContainer = cosmosDatabase.getContainer(containerId);
 
-        String query = "SELECT * FROM c WHERE c.id = '" + userId + "'";
+        String query = "SELECT * FROM c WHERE c.userId = '" + userId + "'";
         var queryOptions = new CosmosQueryRequestOptions();
 
         var items = cosmosContainer.queryItems(query, queryOptions, ImageDTO.class);

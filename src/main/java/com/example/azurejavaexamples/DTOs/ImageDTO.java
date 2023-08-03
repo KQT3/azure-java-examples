@@ -6,7 +6,8 @@ public record ImageDTO(String userId, String id, ImageDTO.ImagesCollection[] ima
     @Override
     public String toString() {
         return "ImageDTO{" +
-                "id='" + id + '\'' +
+                "userId='" + userId + '\'' +
+                ", id='" + id + '\'' +
                 ", imagesCollection=" + Arrays.toString(imagesCollection) +
                 '}';
     }

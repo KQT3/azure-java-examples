@@ -20,13 +20,13 @@ class CosmosDBTests {
     @Test
     void getItemSuccess() {
         var result = cosmosDB.getItem();
-        System.out.println(result);
+        ANSIColors.printGreen(result);
     }
 
     @Test
     void getAllItemSuccess() {
         var result = cosmosDB.allItems();
-        System.out.println(result);
+        ANSIColors.printGreen(result);
     }
 
     @Test
@@ -40,20 +40,20 @@ class CosmosDBTests {
         ImageDTO imageDTO = new ImageDTO(UUID.randomUUID().toString(), UUID.randomUUID().toString(), imagesCollections);
         System.out.println(imageDTO);
         var result = cosmosDB.addItem(imageDTO);
-        System.out.println(result);
+        ANSIColors.printGreen(result);
     }
 
     @Test
     void generateDateSuccess() {
         String result = CosmosHelperClass.generateDate();
-        System.out.println(result);
+        ANSIColors.printGreen(result);
     }
 
     @Test
     void UUID() {
         for (int i = 0; i < 10; i++) {
             UUID uuid = UUID.randomUUID();
-            System.out.println(uuid);
+            ANSIColors.printGreen(uuid);
         }
     }
 

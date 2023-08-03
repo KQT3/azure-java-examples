@@ -19,7 +19,8 @@ class CosmosDBTests {
 
     @Test
     void getItemSuccess() {
-        var result = cosmosDB.getItem();
+        String userId = "ec8e3d53-5b88-438e-8187-4d4aacdebb04";
+        var result = cosmosDB.getItem(userId);
         ANSIColors.printGreen(result);
     }
 

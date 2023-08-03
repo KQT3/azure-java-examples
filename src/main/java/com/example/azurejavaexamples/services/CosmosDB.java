@@ -20,12 +20,11 @@ import java.util.stream.Collectors;
 public class CosmosDB {
     private AzureCredentials azureCredentials;
 
-    public ImageDTO getItem() {
+    public ImageDTO getItem(String userId) {
         CosmosClient cosmosClient = createCosmosClient(azureCredentials.getServiceURI(), azureCredentials.getPrimarySecretKey());
 
         String databaseId = "chaincue";
         String containerId = "user_images";
-        String userId = "ec8e3d53-5b88-438e-8187-4d4aacdebb04";
 
         CosmosDatabase cosmosDatabase = cosmosClient.getDatabase(databaseId);
         CosmosContainer cosmosContainer = cosmosDatabase.getContainer(containerId);
